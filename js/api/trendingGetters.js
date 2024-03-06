@@ -1,5 +1,3 @@
-import { baseUrl } from "./config.js";
-
 const options = {
     method: "GET",
     headers: {
@@ -14,7 +12,7 @@ const options = {
  * @returns media di tendenza
  */
 
-export const getTrending = async () => {
+export const getTrending = async (baseUrl) => {
     const response = await fetch(baseUrl + "all/day", options);
     const data = await response.json();
 
@@ -26,7 +24,7 @@ export const getTrending = async () => {
  * @returns film di tendenza
  */
 
-export const getTrendingMovies = async () => {
+export const getTrendingMovies = async (baseUrl) => {
     const response = await fetch(baseUrl + "movie/day", options);
     const data = await response.json();
 
