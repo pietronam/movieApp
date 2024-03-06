@@ -13,7 +13,7 @@ const options = {
  */
 
 export const getTrending = async (baseUrl) => {
-    const response = await fetch(baseUrl + "all/day", options);
+    const response = await fetch(baseUrl + "trending/all/day", options);
     const data = await response.json();
 
     return data;
@@ -25,7 +25,7 @@ export const getTrending = async (baseUrl) => {
  */
 
 export const getTrendingMovies = async (baseUrl) => {
-    const response = await fetch(baseUrl + "movie/day", options);
+    const response = await fetch(baseUrl + "trending/movie/day", options);
     const data = await response.json();
 
     return data;
@@ -37,7 +37,7 @@ export const getTrendingMovies = async (baseUrl) => {
  */
 
 export const getTrendingPeople = async (baseUrl) => {
-    const response = await fetch(baseUrl + "person/day", options);
+    const response = await fetch(baseUrl + "trending/person/day", options);
     const data = await response.json();
 
     return data;
@@ -49,7 +49,7 @@ export const getTrendingPeople = async (baseUrl) => {
  */
 
 export const getTrendingSeries = async (baseUrl) => {
-    const response = await fetch(baseUrl + "tv/day", options);
+    const response = await fetch(baseUrl + "trending/tv/day", options);
     const data = await response.json();
 
     return data;
