@@ -30,3 +30,27 @@ export const getTrendingMovies = async (baseUrl) => {
 
     return data;
 }
+
+/**getTrendingPeople
+ * @param baseUrl
+ * @returns persone di tendenza
+ */
+
+export const getTrendingPeople = async (baseUrl) => {
+    const response = await fetch(baseUrl + "person/day", options);
+    const data = await response.json();
+
+    return data;
+}
+
+/**getTrendingSeries
+ * @param baseUrl
+ * @returns series di tendenza
+ */
+
+export const getTrendingSeries = async (baseUrl) => {
+    const response = await fetch(baseUrl + "tv/day", options);
+    const data = await response.json();
+
+    return data;
+}
