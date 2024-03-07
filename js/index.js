@@ -2,10 +2,6 @@ import { getTrending, getTrendingMovies, getTrendingPeople, getTrendingSeries } 
 import { getSearchPeople } from "./api/searchGetters.js";
 import { printMedia } from "./api/printMedia.js";
 
-//Import del Package delle variabili d'ambiente
-import dotenv from "dotenv";
-dotenv.config();
-
 let person_name = "Clooney";
 /**Da aggiungere:
  * id
