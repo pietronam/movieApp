@@ -18,10 +18,10 @@ export const getTrending = async () => {
 export const getTrendingMovies = async () => {
     const response = await fetch(BASE_URL + "trending/movie/day", OPTIONS);
     const data = await response.json();
-
+    
     return data;
 }
-
+getTrendingMovies();
 /**getTrendingPeople
  * @returns persone di tendenza
  */
