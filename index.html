@@ -10,19 +10,19 @@
 
 <body>
     <h1 id="header">movieAp</h1>
-
+    <ul id="trending-list">
+    </ul>
 </body>
 <script type="module">
-    import { fixTitle, addParagraph } from "./js/index.js";
-    import { getTrendingMovies } from "./js/index.js";
-
+    import { fixTitle, addParagraph, getTrending, getTrendingMovies, createTrendingMoviesList, createTrendingList } from "./js/index.js";
 
     fixTitle();
-    addParagraph();
-
-    const dati = await getTrendingMovies();
-
-    console.log(dati)
+    /**
+    const movieData = await getTrendingMovies();
+    createTrendingMoviesList(movieData.results);
+    */
+   const trendingData = await getTrending();
+   createTrendingList(trendingData.results);
 </script>
 
 </html>
