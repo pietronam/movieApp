@@ -21,34 +21,6 @@ h3{
     padding-left:5%;
 }
 
-/*Navbar*/
-.navbar{
-    width:100%;
-    padding-top: 10px;
-    padding-bottom:10px;
-    background-color: black;
-    position: absolute;
-    display:block;
-}
-.navbar-list{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-}
-
-li{
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-};
-
-li:hover{
-    background-color: #111;
-}
-
 /*Card Appearance*/
 .card-scroller {
     display: block;
