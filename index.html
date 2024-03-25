@@ -23,23 +23,26 @@
     <div id="people-cards" class="person-card-scroller"></div>
 </body>
 <script type="module">
-    import { fixTitle, addParagraph, getTrending, getTrendingMovies, getTrendingSeries, getTrendingPeople, createTrendingMoviesList, createTrendingList, createCards } from "./js/index.js";
+    import { fixTitle, addParagraph, getTrending, createTrendingMoviesList, createTrendingList, createCards } from "./js/index.js";
 
     const allCards = "all-cards";
     const moviesCards = "movies-cards";
     const seriesCards = "series-cards";
     const peopleCards = "people-cards";
+    const allUrl = "trending/all/day";
+    const moviesUrl = "trending/movie/day";
+    const peopleUrl = "trending/person/day";
+    const seriesUrl = "trending/tv/day";
 
-    const trendingData = await getTrending();
+    const trendingData = await getTrending(allUrl);
+    const trendingMoviesData = await getTrending(moviesUrl);
+    const trendingSeriesData = await getTrending(seriesUrl);
+    const trendingPeopleData = await getTrending(peopleUrl);
+
+    
     createCards(trendingData.results, allCards);
-
-    const trendingMoviesData = await getTrendingMovies();
     createCards(trendingMoviesData.results, moviesCards);
-
-    const trendingSeriesData = await getTrendingSeries();
     createCards(trendingSeriesData.results, seriesCards);
-
-    const trendingPeopleData = await getTrendingPeople();
     createCards(trendingPeopleData.results, peopleCards);
 </script>
 
