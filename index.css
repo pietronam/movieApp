@@ -1,0 +1,100 @@
+/*Global Elements*/
+
+html * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:white;
+}
+
+body {
+    background-color: rgb(30, 50, 50);
+
+}
+
+.header-text{
+    position: absolute;
+    display:block;
+    text-align: center;
+    font-weight: bold;
+}
+h3{
+    position: absolute;
+    padding-left:5%;
+}
+
+/*Navbar*/
+.navbar{
+    width:100%;
+    padding-top: 10px;
+    padding-bottom:10px;
+    background-color: black;
+    position: absolute;
+    display:block;
+}
+.navbar-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+li{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+};
+
+li:hover{
+    background-color: #111;
+}
+
+/*Card Appearance*/
+.card-scroller {
+    display: block;
+    background-color: rgb(51, 51, 51);
+    height: 13rem;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.card {
+    display: inline-block;
+    position: sticky;
+    width: 300px;
+    height: 12rem;
+    color: white;
+    border-width: 5px;
+    border-radius: 5px;
+    margin-inline: 5px;
+    background-color: black;
+    border-color: gray;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 300px;
+    height: 169px;
+    overflow-y: hidden;
+}
+
+.text-container {
+    height: 23px;
+}
+
+.card-title {
+    padding-left: 5px;
+    display: inline;
+    overflow: hidden;
+}
+
+.card-description {
+    visibility: hidden;
+    display: block;
+    overflow: hidden;
+}

@@ -21,9 +21,9 @@ export const createTrendingMoviesList = (movieArray) => {
  * @param data
  */
 
-export const createTrendingList = (dataArray) => {
+export const createTrendingList = (dataArray, desiredUl) => {
+    let trendingList = document.getElementById(desiredUl);
     dataArray.forEach(element => {
-        const trendingList = document.getElementById("trending-list");
         const mediaTitle = document.createElement("li");
 
         switch (element.media_type) {

@@ -5,24 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>movieApp</title>
-
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <h1 id="header">movieAp</h1>
-    <ul id="trending-list">
-    </ul>
+    <div class="navbar">
+        <ul class="navbar-list">
+            <li>Home</li>
+            <li>All</li>
+            <li>Movies</li>
+            <li>Series</li>
+            <li>People</li>
+            <li>About</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <div class="header">
+    <h1 class="header-text">MovieApp</h1>
+    </div>
+    <br>
+    <h3>All Media</h3>
+    <div id="all-cards" class="card-scroller"></div>
+    <br>
+    <h3>Movies</h3>
+    <div id="movies-cards" class="card-scroller"></div>
+    <br>
+    <h3>TV Series</h3>
+    <div id="series-cards" class="card-scroller"></div>
+    <br>
+    <h3>Actors and Directors</h3>
+    <div id="people-cards" class="card-scroller"></div>
 </body>
 <script type="module">
-    import { fixTitle, addParagraph, getTrending, getTrendingMovies, createTrendingMoviesList, createTrendingList } from "./js/index.js";
+    import { fixTitle, addParagraph, getTrending, getTrendingMovies, getTrendingSeries, getTrendingPeople, createTrendingMoviesList, createTrendingList, createCards } from "./js/index.js";
 
-    fixTitle();
-    /**
-    const movieData = await getTrendingMovies();
-    createTrendingMoviesList(movieData.results);
-    */
-   const trendingData = await getTrending();
-   createTrendingList(trendingData.results);
+    const allCards = "all-cards";
+    const moviesCards = "movies-cards";
+    const seriesCards = "series-cards";
+    const peopleCards = "people-cards";
+
+    const trendingData = await getTrending();
+    createCards(trendingData.results, allCards);
+
+    const trendingMoviesData = await getTrendingMovies();
+    createCards(trendingMoviesData.results, moviesCards);
+
+    const trendingSeriesData = await getTrendingSeries();
+    createCards(trendingSeriesData, seriesCards);
+
+    const trendingPeopleData = await getTrendingPeople();
+    createCards(trendingPeopleData, peopleCards);
 </script>
 
 </html>

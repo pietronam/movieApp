@@ -21,7 +21,6 @@ export const getTrendingMovies = async () => {
     
     return data;
 }
-getTrendingMovies();
 /**getTrendingPeople
  * @returns persone di tendenza
  */
