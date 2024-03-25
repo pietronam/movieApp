@@ -9,9 +9,7 @@
 </head>
 
 <body>
-    <h1 class="header-text">MovieApp</h1>
-    </div>
-    <br>
+    <h1 id="header">MovieApp</h1>
     <h3>All Media</h3>
     <div id="all-cards" class="card-scroller"></div>
     <br>
@@ -22,7 +20,7 @@
     <div id="series-cards" class="card-scroller"></div>
     <br>
     <h3>Actors and Directors</h3>
-    <div id="people-cards" class="card-scroller"></div>
+    <div id="people-cards" class="person-card-scroller"></div>
 </body>
 <script type="module">
     import { fixTitle, addParagraph, getTrending, getTrendingMovies, getTrendingSeries, getTrendingPeople, createTrendingMoviesList, createTrendingList, createCards } from "./js/index.js";
@@ -39,10 +37,10 @@
     createCards(trendingMoviesData.results, moviesCards);
 
     const trendingSeriesData = await getTrendingSeries();
-    createCards(trendingSeriesData, seriesCards);
+    createCards(trendingSeriesData.results, seriesCards);
 
     const trendingPeopleData = await getTrendingPeople();
-    createCards(trendingPeopleData, peopleCards);
+    createCards(trendingPeopleData.results, peopleCards);
 </script>
 
 </html>

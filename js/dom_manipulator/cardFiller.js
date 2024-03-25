@@ -10,11 +10,8 @@ export const createCards = (mediaArray, desiredDiv) => {
 
     mediaArray.forEach(element => {
         const card = document.createElement("div");
-            card.classList.add("card");
         const imageContainer = document.createElement("div");
-            imageContainer.classList.add("image-container")
-        const image = document.createElement("img");
-            
+            const image = document.createElement("img");
         const textContainer = document.createElement("div");
             textContainer.classList.add("text-container");
             const title = document.createElement("h4");
@@ -24,13 +21,19 @@ export const createCards = (mediaArray, desiredDiv) => {
         
         switch(element.media_type) {
             case "movie":
+                card.classList.add("card");
+                imageContainer.classList.add("image-container")
+
                 title.innerText = (element.title);
                 image.classList.add("movie-backdrop")
                 image.src = `http://image.tmdb.org/t/p/w300/${element.backdrop_path}`
                 image.alt = "movie-backdrop"
-                description.innerText = element.overview
+                description.innerText = element.overview;
                 break;
             case "tv":
+                card.classList.add("card");
+                imageContainer.classList.add("image-container")
+
                 title.innerText = (element.name);
                 image.classList.add("series-backdrop")
                 image.src = `http://image.tmdb.org/t/p/w300/${element.backdrop_path}`
@@ -38,6 +41,9 @@ export const createCards = (mediaArray, desiredDiv) => {
                 description.innerText = element.overview
                 break;
             case "person":
+                card.classList.add("person-card");
+                imageContainer.classList.add("person-image-container")
+                
                 title.innerText = (element.name);
                 image.classList.add("actor-profile")
                 image.src = `http://image.tmdb.org/t/p/w300/${element.profile_path}`
