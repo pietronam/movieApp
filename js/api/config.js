@@ -4,6 +4,7 @@
 
 export const BASE_URL = "https://api.themoviedb.org/3/";
 export const IMG_BASE_URL = "https://image.tmdb.org/t/p/";
+export const SEARCH_MOVIE_URL = "https://api.themoviedb.org/3/search/movie?query=";
 export const OPTIONS = {
     method: "GET",
     headers: {

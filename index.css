@@ -1,20 +1,26 @@
 /*Global Elements*/
 html * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:white;
+    color: white;
 }
 
 body {
     background-color: rgb(30, 50, 50);
 }
 
-#header{
+#header {
     text-align: center;
     font-weight: bold;
 }
-h3{
-    padding-left:5%;
+
+h3 {
+    padding-left: 5%;
 }
+
+input {
+    color: black;
+}
+
 /*Card Appearance*/
 .card-scroller {
     display: block;
@@ -36,6 +42,35 @@ h3{
     width: 90%;
     padding: 25px;
     border-radius: 10px;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+#search-bar {
+    display: block;
+    margin: auto;
+    background-color: rgb(51, 51, 51);
+    width: 90%;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#btn-search {
+    color: black;
+}
+
+.search-scroller {
+    display: block;
+    background-color: rgb(51, 51, 51);
+    height: 13rem;
+    width: 90%;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    ;
     margin: auto;
     overflow-x: auto;
     overflow-y: hidden;
@@ -76,9 +111,9 @@ h3{
     overflow-y: hidden;
 }
 
-.person-image-container{
+.person-image-container {
     width: 300px;
-    height:450px;
+    height: 450px;
 }
 
 .text-container {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>movieApp</title>
+    <title>MovieApp</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -21,14 +21,16 @@
     <br>
     <h3>Actors and Directors</h3>
     <div id="people-cards" class="person-card-scroller"></div>
+    <h3>Search</h3>
+    <div id="search-bar">
+        <input id="query-input" type="text" placeholder="Inserisci parola chiave..."/>
+        <button id="btn-search" onclick= searchAndCreateCards()>Cerca</button>
+    </div>
+    <div id="search-cards" class="search-scroller"></div>
 </body>
 <script type="module">
-    import { fixTitle, addParagraph, getTrending, createTrendingMoviesList, createTrendingList, createCards } from "./js/index.js";
+    import { fixTitle, addParagraph, getTrending, createTrendingMoviesList, createTrendingList, createCards, searchAndCreateCards } from "./js/index.js";
 
-    const allCards = "all-cards";
-    const moviesCards = "movies-cards";
-    const seriesCards = "series-cards";
-    const peopleCards = "people-cards";
     const allUrl = "trending/all/day";
     const moviesUrl = "trending/movie/day";
     const peopleUrl = "trending/person/day";
@@ -38,12 +40,12 @@
     const trendingMoviesData = await getTrending(moviesUrl);
     const trendingSeriesData = await getTrending(seriesUrl);
     const trendingPeopleData = await getTrending(peopleUrl);
-
     
-    createCards(trendingData.results, allCards);
-    createCards(trendingMoviesData.results, moviesCards);
-    createCards(trendingSeriesData.results, seriesCards);
-    createCards(trendingPeopleData.results, peopleCards);
-</script>
+    createCards(trendingData.results, "all-cards");
+    createCards(trendingMoviesData.results, "movies-cards");
+    createCards(trendingSeriesData.results, "series-cards");
+    createCards(trendingPeopleData.results, "people-cards");
 
+    window.searchAndCreateCards = searchAndCreateCards;
+</script>
 </html>
